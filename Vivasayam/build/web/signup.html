@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <script>
+            function validate(){
+                var fn=document.getElementById("fn");
+                var ln=doucment.getElementById("ln");
+                var pwd=document.getElementById("pwd");
+                var pwdc=document.getElementById("pwdc");
+                var no=document.getElementById("no");
+                alert("hello");
+                var key1=/[a-zA-Z0-9]+$/;
+                if(!(fn.match(key1))){
+                    alert("username is invalid it should not contain any special character");
+                    return false;
+                }
+                if(!(ln.match(key1))){
+                    alert("username is invalid it should not contain any special character");
+                    return false;
+                }
+                if(pwd!==pwdc){
+                    alert("password mismatch");
+                }
+                if(no.length()!==10){
+                    alert(phone number must contain 10 digits);
+                }
+               
+            }
+        </script>
+        <style>
+            input{
+                border-style: outset;
+                padding:8px;
+                margin:12px;
+            }
+            div{
+                background:rgba(0,0,0,0.7);
+                color:yellow;
+                border:1px solid black;
+                margin-top:13%;
+                margin-left: 30%;
+                width:40%;
+                border-radius:30px;
+                
+            }
+            input[type="submit"]{
+                background: #006655;
+                color:white;
+                border-style: outset;
+                padding:10px;       
+                width:25%;
+                font-size: 15px;
+            }
+            body{
+                background-image:url("maxresdefault.jpg");
+                
+            }
+            header{
+                background-color:rgba(0,0,0,0.9);
+                color:green;
+                height: 5%;
+            }
+              div#footer{
+                width:100%;
+                margin-left: 0%;
+                color:white;
+                margin-top:12%;
+                background-color:rgba(0,0,0,0.9);
+                height:7%;
+                border-radius: 0%;
+            }
+            
+        </style>
+    </head>
+    <body >
+        <header><h1>vivasaya Nanban</h1></header>
+           
+    <div>
+         <center>   <h1>SIGN UP !</h1>
+            </center>
+        <form action="http://localhost:8084/Vivasayam/signup.jsp" method="POST" onsubmit="return validate()">
+           
+            <input type="radio" name="user" id="user" value="farmer" required/>farmer 
+        &nbsp;<input type="radio" name="user" id="user" value="shopkeeper"/>market
+        &nbsp;<input type="radio" name="user" id="user" value="intermediater"/>intermediater
+        <br>
+        <input type="text" placeholder="first name" name="fn" id="fn" required/>
+        <input type="text" placeholder="last name" name="ln" id="ln" required/> <br>
+        <input type="password" placeholder="password" name="pwd" id="pwd" required/>
+        <input type="password" placeholder="confirm password" name="pwdc" id="pwdc" required/>
+        <br>
+          <input type="text" name="no" id="no" placeholder="Phone no:" required/>
+          <br>
+          <input type="text" name="place" id="place" placeholder="place" required/>
+          <input type="text" name="dist" id="dist" placeholder="district" required/>
+          <br>
+          <input type="submit" name="submit" value="submit" onclick=" return validate()"/>
+        </form>
+    </div>
+        
+    <div id="footer"><a href="market.jsp">Home</a> | <a href="/node/70">Privacy Policy</a> | <a href="/node/69">Disclaimer</a> | <a href="/node/71">Linking Policy</a> | <a href="/node/6">Contact us</a> | <a href="/node/422">Feedback</a>
+              <p><a href="/node/1496">Copyright</a><font style="color:white"> © 2016</font> <a href="http://www.icar.org.in">BY kumar team</a><br>
+                  <font style="color:white">Ajith kumar.E,M.Sathish Kumar coimbatore-641032. </font><a href="http://india.gov.in/">INDIA</a></p>
+    </div>
+        
+        
+    </body>
+</html>
